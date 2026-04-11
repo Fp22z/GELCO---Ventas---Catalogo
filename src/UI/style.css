@@ -1,0 +1,158 @@
+:root {
+    --pink-primary: #e45272;
+    --dark-text: #1f2937;
+    --light-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial;
+}
+
+/* Hero & Navbar */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/img-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    background: #fbf2f9;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-name {
+    text-decoration: none;
+    color: #ee5291;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.btn-nav {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.btn-ini {
+    background: var(--pink-primary);
+    color: white;
+}
+
+.btn-reg {
+    background: white;
+    color: var(--pink-primary);
+}
+
+.hero-content {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 60px;
+}
+
+/* Services Cards */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+    margin-top: -50px; /* Eleva las tarjetas sobre el hero */
+}
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 40%;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    color: var(--dark-text);
+}
+
+.characteristics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px;
+    margin-top: -70px; /* Eleva las tarjetas sobre el hero */
+}
+
+.characteristic-card {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.characteristic-card img {
+    width: 20%;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.characteristic-card h3 {
+    font-size: 15px;
+    color: #615c5c;
+}
+
+/* Info Section */
+.welcome-info {
+    text-align: center;
+    padding: 10px 20%;
+    background-color: var(--light-bg);
+}
+
+.welcome-info h2 {
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+.welcome-info h5 {
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+/* Footer */
+.main-footer {
+    background: #eceaeb;
+    color: #666;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
