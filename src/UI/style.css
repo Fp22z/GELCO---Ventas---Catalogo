@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 :root {
     --pink-primary: #e45272;
+    --pink-soft: #f8d7e2;
     --dark-text: #1f2937;
     --light-bg: #ffffff;
 }
@@ -8,45 +11,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', Arial;
 }
 
-/* Hero & Navbar */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+}
+
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/img-fondo.jpg');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 85vh;
     color: white;
+    margin-bottom: 5px;
+
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 50px;
+    padding: 15px 80px;
     background: #fbf2f9;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+}
+
+.logo {
+    width: 50px;
 }
 
 .brand-name {
-    text-decoration: none;
-    color: #ee5291;
-    font-weight: 500;
-    font-size: 22px;
+    color: var(--pink-primary);
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .btn-nav {
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 15px;
     font-weight: 500;
-    padding: 8px 20px;
-    border-radius: 5px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .btn-ini {
@@ -54,105 +66,120 @@
     color: white;
 }
 
+.btn-ini:hover {
+    background: #c73c5b;
+}
+
 .btn-reg {
     background: white;
     color: var(--pink-primary);
+    border: 2px solid var(--pink-primary);
+}
+
+.btn-reg:hover {
+    background: var(--pink-primary);
+    color: white;
 }
 
 .hero-content {
+    max-width: 600px;
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-.logo {
-    width: 60px;
+.hero-content p {
+    font-size: 18px;
+    opacity: 0.9;
 }
 
-/* Services Cards */
 .services {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 50px;
-    margin-top: -50px; /* Eleva las tarjetas sobre el hero */
+    gap: 25px;
+    margin-top: 0;
+    padding: 60px 80px;
 }
+
 .service-card {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 30px 20px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
 }
 
 .service-card img {
-    width: 40%;
-    height: 65px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 60px;
     margin-bottom: 15px;
 }
 
 .service-card h3 {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--dark-text);
+    font-weight: 500;
+}
+
+.welcome-info {
+    text-align: center;
+    padding: 40px 20%;
+}
+
+.welcome-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+.welcome-info h5 {
+    font-size: 16px;
+    color: #6b7280;
 }
 
 .characteristics {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    padding: 50px;
-    margin-top: -70px; /* Eleva las tarjetas sobre el hero */
+    gap: 40px;
+    padding: 40px 80px 80px;
 }
 
 .characteristic-card {
     background: white;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 25px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.characteristic-card:hover {
+    transform: translateY(-5px);
 }
 
 .characteristic-card img {
-    width: 20%;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    width: 50px;
+    margin-bottom: 12px;
 }
 
 .characteristic-card h3 {
     font-size: 15px;
-    color: #615c5c;
+    color: #4b5563;
 }
 
-/* Info Section */
-.welcome-info {
-    text-align: center;
-    padding: 10px 20%;
-    background-color: var(--light-bg);
-}
-
-.welcome-info h2 {
-    margin-bottom: 20px;
-    color: var(--dark-text);
-}
-
-.welcome-info h5 {
-    margin-bottom: 20px;
-    color: var(--dark-text);
-}
-
-/* Footer */
 .main-footer {
-    background: #eceaeb;
-    color: #666;
+    background: #f3f4f6;
+    color: #6b7280;
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     font-size: 14px;
 }

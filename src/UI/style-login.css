@@ -85,7 +85,7 @@ input {
 }
 
 input:focus {
-    border-color: #e11d48; /* Color rosado fuerte */
+    border-color: #e11d48;
 }
 
 .btn-login {
