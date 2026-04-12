@@ -1,0 +1,122 @@
+:root {
+  --pink-primary: #e11d48;
+}
+.login-container {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  /* Centrado en pantalla */
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ── LADO IMAGEN ── */
+.login-image {
+  width: 50%;
+  background-color: #ffe4e6;
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── LADO FORMULARIO ── */
+.login-form-section {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-content {
+  width: 100%;
+}
+
+.form-content .logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.form-content h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+/* ── INPUTS ── */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 0.95rem;
+}
+
+.input-group input:focus {
+  border-color: var(--pink-primary);
+}
+
+/* ── BOTÓN ── */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--pink-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #be123c;
+}
+
+/* ── FOOTER DEL FORMULARIO ── */
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-footer a {
+  color: var(--pink-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.register-text {
+  margin-top: 15px;
+  color: #777;
+  font-size: 0.9rem;
+}
