@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { getProductos } from '../../services/api';
 import './Home.css';
 
 export default function Home() {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    getProductos().then(setProductos);
+  }, []);
+
   return (
     <main className="page">
 
@@ -48,7 +56,9 @@ export default function Home() {
       {/* BIENVENIDA */}
       <section className="welcome-info">
         <h2>Bienvenidos a Ventas por Catálogo Perú</h2>
-        <p className="welcome-subtitle">La herramienta integral para tu negocio de venta directa</p>
+        <p className="welcome-subtitle">
+          La herramienta integral para tu negocio de venta directa
+        </p>
       </section>
 
       {/* CARACTERÍSTICAS */}
@@ -65,6 +75,23 @@ export default function Home() {
           <img src="/assets/soporte.png" alt="Soporte 24/7" />
           <h3>Soporte y asistencia 24/7</h3>
         </article>
+      </section>
+
+      {/* PRODUCTOS DESDE BD */}
+      <section className="services">
+        <h2 style={{ textAlign: 'center' }}>Productos disponibles</h2>
+
+        {productos.length === 0 ? (
+          <p style={{ textAlign: 'center' }}>Cargando productos...</p>
+        ) : (
+          productos.map(p => (
+            <article key={p.id} className="service-card">
+              <h3>{p.nombre}</h3>
+              <p>S/. {p.precio}</p>
+              <p>Stock: {p.stock}</p>
+            </article>
+          ))
+        )}
       </section>
 
       {/* FOOTER */}

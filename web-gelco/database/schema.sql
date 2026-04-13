@@ -1,13 +1,4 @@
--- SCRIPT PARA BD GELCO
-
--- =========================================
--- CREAR BASE DE DATOS
--- =========================================
-CREATE DATABASE GELCO;
-GO
-
-USE GELCO;
-GO
+-- SCRIPT PARA BD (ESQUEMA DE GELCO)
 
 -- =========================================
 -- USUARIOS
