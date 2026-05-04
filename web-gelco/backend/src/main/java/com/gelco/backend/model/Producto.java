@@ -1,5 +1,6 @@
 package com.gelco.backend.model;
 
+import com.gelco.backend.model.Categoria;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,6 +16,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="productos")
+
+
 public class Producto {
 
     @Id
@@ -33,8 +36,9 @@ public class Producto {
     @Column(nullable = false)
     private Integer stock;
 
-    @Column(name = "categoria_id", nullable = false)
-    private Integer categoriaId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "categoria_id", nullable = false)
+    private Categoria categoria;
 
     @Column(nullable = false)
     private Boolean activo;
